@@ -1,10 +1,12 @@
 body {
   /* border: 1px solid black; */
   font-family: sans-serif;
-  height: auto;
-  width: auto;
+  height: 900px;
+  width: 900px;
 }
 button {
+  font-weight: bold;
+  border-radius: 2rem;
   width: 5rem;
   height: 2rem;
   margin-left: 1rem;
@@ -48,7 +50,7 @@ button {
   display: grid;
   height: 100%;
   width: 100%;
-  grid-template-columns: repeat(16, 1fr);
+
   grid-template-rows: repeat(auto-fit, 1fr);
 }
 .block {
@@ -76,6 +78,5 @@ button {
   gap: 1rem;
   display: grid;
   grid-area: options-btn;
-
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
