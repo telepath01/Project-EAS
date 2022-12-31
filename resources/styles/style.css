@@ -12,6 +12,11 @@ button {
   margin-left: 1rem;
   margin-bottom: 3em;
 }
+li {
+  list-style: decimal;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
 .game-container {
   /* background-color: rgb(217, 217, 255); */
@@ -34,8 +39,33 @@ button {
 }
 
 .game-instructions {
+  display: grid;
   grid-area: instructions;
   background-color: aquamarine;
+  align-content: center;
+}
+
+.instructions-text {
+  display: grid;
+  grid-template-rows: 30% 100%;
+  grid-template-areas:
+    "text-heading"
+    "li";
+}
+
+.text-heading {
+  grid-area: text-heading;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.list-container {
+  display: grid;
+  margin-right: 2rem;
+  row-gap: 1rem;
+  grid-area: li;
+  align-items: center;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .game-board {
