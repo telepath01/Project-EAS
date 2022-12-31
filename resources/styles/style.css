@@ -1,0 +1,81 @@
+body {
+  /* border: 1px solid black; */
+  font-family: sans-serif;
+  height: auto;
+  width: auto;
+}
+button {
+  width: 5rem;
+  height: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 3em;
+}
+
+.game-container {
+  /* background-color: rgb(217, 217, 255); */
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 5em 30em 5em;
+  grid-template-areas:
+    "heading heading"
+    "board instructions"
+    "options options";
+}
+
+.game-heading {
+  grid-area: heading;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  background-color: red;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.game-instructions {
+  grid-area: instructions;
+  background-color: aquamarine;
+}
+
+.game-board {
+  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-area: board;
+  background-color: brown;
+}
+.board {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+}
+.block {
+  background-color: black;
+}
+
+.game-options {
+  grid-area: options;
+  display: grid;
+  grid-template-rows: 2.5rem 1fr;
+  grid-template-areas:
+    "options-text"
+    "options-btn";
+  background-color: chocolate;
+}
+.options-heading {
+  grid-area: options-text;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: 2px;
+  font-size: 1.5rem;
+}
+.options-btn-container {
+  gap: 1rem;
+  display: grid;
+  grid-area: options-btn;
+
+  grid-template-columns: repeat(5, 1fr);
+}
